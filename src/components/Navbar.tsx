@@ -1,0 +1,57 @@
+import React, { useState } from "react";
+import logo from "../assets/front-end/logo.png";
+import { Button } from "./ui/button";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import leftpink from "../assets/front-end/leftpink.png";
+
+const Navbar = () => {
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  return (
+    <div className="font-outfit relative w-full border-r border-gray">
+      <img
+        src={leftpink}
+        alt=" "
+        className="absolute top-0 right-0 hidden sm:block md:w-[40vw] opacity-90 -z-0"
+      />
+
+      <div className="relative font-outfit flex justify-between items-center h-24 w-[90%] mx-auto px-4 text-black z-10">
+        {/* Logo*/}
+        <img src={logo} alt=" " className="h-10-w-auto " />
+
+        {/* Nav bar for >md */}
+        <ul className="hidden md:flex items-center ">
+          <li className="p-4 lg:text-xl ">About</li>
+          <li className="p-4 lg:text-xl ">Events</li>
+          <Button className="p-4 lg:text-xl  bg-[#780001] "> Join Us </Button>
+        </ul>
+
+        <div onClick={handleNav} className="block md:hidden">
+          {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        </div>
+
+        {/* Hamburger Menu for >md */}
+        <div
+          className={
+            nav
+              ? "fixed left-0 top-0 w-[85%] h-full border-r border-gray-900 bg-[#4A6B5F] transition-all ease-in-out duration-500"
+              : "fixed left-[-100%] top-0 w-[50%] h-full border-r border-gray-900 bg-[#4A6B5F] transition-all ease-in-out duration-500"
+          }
+        >
+          <img src={logo} alt=" " className="h-12-w-auto m-4" />
+          <ul className="uppercase p-4">
+            <li className="p-4 border-b border-gray-000">About</li>
+            <li className="p-4  border-b border-gray-000">Events</li>
+            <li className="p-4  border-b border-gray-000"> Join Us </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

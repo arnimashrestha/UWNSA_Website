@@ -1,7 +1,16 @@
-import { Button } from "./components/ui/button";
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About_US from "./components/About_US";
 
-function App() {
-  return <Button variant="ghost">Click Me</Button>;
-}
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+      <Hero />
+      <About_US />
+    </div>
+  );
+};
 
 export default App;
