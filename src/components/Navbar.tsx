@@ -16,10 +16,10 @@ const Navbar = () => {
       <img
         src={leftpink}
         alt=" "
-        className="absolute top-0 right-0 hidden sm:block md:w-[40vw] opacity-90 -z-0"
+        className="absolute top-0 right-0 hidden md:block lg:w-[25vw] xl:w-[30vw] opacity-90 -z-0"
       />
 
-      <div className="relative font-outfit flex justify-between items-center h-24 w-[90%] mx-auto px-4 text-black z-10">
+      <div className="relative font-outfit flex justify-between items-center h-24 w-[80%] mx-auto px-4 text-black z-10">
         {/* Logo*/}
         <img src={logo} alt=" " className="h-10-w-auto " />
 

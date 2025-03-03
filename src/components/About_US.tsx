@@ -4,13 +4,13 @@ import team from "../assets/front-end/Team.png";
 const About_US = () => {
   return (
     //Need to use a flex box because and have to ensure that when its on a small screen, then it is in a row (the image)
-    <div className="bg-[#FAEDD6] mt-10 flex justify-center ">
-      <div className="w-[90%] items-center">
-        <h1 className="text-4xl font-bold text-[#780001] mt-10 ">About Us</h1>
-        <hr className="mt-3 border-[#000000]"></hr>
-        <div className="flex flex-col md:flex-row items-start gap-8 mt-5 pb-5">
+    <div className="bg-[#FAEDD6] mt-30 flex justify-center  ">
+      <div className="w-[80%] items-center">
+        <h1 className="text-5xl font-bold text-[#780001] mt-10 ">About Us</h1>
+        <hr className=" border-[#000000]  mt-10"></hr>
+        <div className="flex flex-col md:flex-row items-start gap-8 mt-10 pb-5">
           <div className="flex-1 flex text-left items-start ">
-            <p className="text-lg leading-relaxed">
+            <p className="text-xl leading-relaxed">
               UWNSA’s goal is to celebrate Nepalese culture, empower our
               community and foster meaningful connections. Through cultural
               events, educational initiatives and collaborations across Nepalese
@@ -24,11 +24,11 @@ const About_US = () => {
               </span>
             </p>
           </div>
-          <div className="flex-1 flex justify-end items-center">
+          <div className="flex-2 flex justify-end items-center">
             <img
               src={team}
               alt=""
-              className=" w-full max-w-md h-auto items-center rounded-2xl"
+              className=" w-[80%] max-w-2xl max-h-[400px] h-auto object-cover rounded-2xl flex items-start"
             />
           </div>
         </div>
