@@ -26,12 +26,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex-1 flex  hidden md:flex items-center w-full md:w-auto align-middle mt-20 xl:mt-10 z-10 xl:justify-end">
-        <img
-          src={mount}
-          alt=" "
-          className="lg:w-[50%] 
-        h-[80%] self-center"
-        ></img>
+        <img src={mount} alt=" " className="w-[35vw]"></img>
       </div>
     </div>
   );
