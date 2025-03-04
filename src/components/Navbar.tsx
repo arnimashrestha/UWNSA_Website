@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logo from "../assets/front-end/logo.png";
 import { Button } from "./ui/button";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
