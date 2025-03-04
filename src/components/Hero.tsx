@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     //For Mobile Dev - Text should be centered, anything greater mobile dev - text should be at the left
 
-    <div className=" flex flex-col md:flex-row items-center md:items-start justify-between mx-auto px-4 bg-[#355848]  w-[80%] gap-3.5 mt-2  z-10">
+    <div className=" flex flex-col md:flex-row items-center md:items-start justify-between mx-auto px-4 bg-[#355848]  w-[80%] lg:h-[40vw] gap-3.5 lg:mt-20 z-10 ">
       <div className="text-center md:text-left max-w-lg w-full  space-y-4 flex-1 z-10">
         <p className="text-2xl font-bold text-[#EAAA08]">Hello Namaste</p>
         <h1 className="text-xl sm:text-4xl md:text-5xl lg:text-5xl 3xl:text-6xl font-bold text-white ">
