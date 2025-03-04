@@ -38,11 +38,11 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w-[85%] h-full border-r border-gray-900 bg-[#4A6B5F] transition-all ease-in-out duration-500"
+              ? "fixed left-0 top-0 w-[80%] h-full border-r border-gray-900 bg-[#4A6B5F] transition-all ease-in-out duration-500"
               : "fixed left-[-100%] top-0 w-[50%] h-full border-r border-gray-900 bg-[#4A6B5F] transition-all ease-in-out duration-500"
           }
         >
-          <img src={logo} alt=" " className="h-12-w-auto m-4" />
+          <img src={logo} alt=" " className="h-12-w-auto m-4 z-20" />
           <ul className="uppercase p-4">
             <li className="p-4 border-b border-gray-000">About</li>
             <li className="p-4  border-b border-gray-000">Events</li>
