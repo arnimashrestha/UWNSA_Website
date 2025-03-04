@@ -6,7 +6,7 @@ const About_US = () => {
     //Need to use a flex box because and have to ensure that when its on a small screen, then it is in a row (the image)
     <div className="bg-[#FAEDD6] mt-30 flex justify-center min-h-[100vh] w-full">
       <div className="w-[80%] lg:w items-center ">
-        <h1 className="text-5xl font-bold text-[#780001] mt-20 ">About Us</h1>
+        <h1 className="text-7xl font-bold text-[#780001] mt-20 ">About Us</h1>
         <hr className=" border-[#000000]  mt-10"></hr>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 mt-10 pb-5">
           <div className="flex-1 flex text-left items-start ">
