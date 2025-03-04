@@ -1,4 +1,3 @@
-import React from "react";
 import team from "../assets/front-end/Team.png";
 
 const About_US = () => {
