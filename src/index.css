@@ -104,3 +104,12 @@ body {
   background-color: #355848;
   font-family: "Outfit", sans-serif;
 }
+
+
+@media (min-width: 640px) and (max-width: 786px) {
+  .PinkMoon {
+    position: relative !important;
+  }
+}
+
+
