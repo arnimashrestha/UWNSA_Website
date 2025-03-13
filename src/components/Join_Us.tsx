@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Join_Us = () => {
   const [checkboxes, setCheckboxes] = useState({
@@ -9,13 +9,20 @@ const Join_Us = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // ✅ Automatically open modal if all checkboxes are checked
+  useEffect(() => {
+    const allChecked = Object.values(checkboxes).every((val) => val === true);
+    if (allChecked) {
+      setIsModalOpen(true);
+    }
+  }, [checkboxes]);
+
   const toggleCheckbox = (key: keyof typeof checkboxes) => {
     setCheckboxes((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
   return (
     <div className="bg-[#FAEDD6] py-12">
-      {/* (This is a GPT Message for Left Alignment, Works on every dim except desktop) ✔ MATCHED LAYOUT: removed px-4 for perfect left alignment */}
       <div className="w-[90%] max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-[#780001] mb-4 text-left">
           Join Us
@@ -92,7 +99,7 @@ const Join_Us = () => {
 
           {/* Modal Box */}
           <div className="fixed inset-0 flex justify-center items-center z-50 px-4">
-            <div className="bg-white w-full max-w-lg rounded-2xl p-6 shadow-2xl relative">
+            <div className="bg-white w-full max-w-lg rounded-2xl p-6 shadow-2xl relative animate-in slide-in-from-top duration-300">
               {/* Close Button */}
               <button
                 className="absolute top-3 right-4 text-2xl font-bold text-gray-600 hover:text-black"
