@@ -1,4 +1,3 @@
-import React from "react";
 import img from "../assets/front-end/pfpdef.png";
 
 const TeamSection = () => {
@@ -18,7 +17,7 @@ const TeamSection = () => {
     },
     {
       id: 3,
-      name: "Arnima",
+      name: "Arnima Shrestha",
       role: "Team Member",
       image: img, // Replace with actual image import
     },
