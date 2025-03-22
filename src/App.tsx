@@ -4,7 +4,7 @@ import About_US from "./components/About_US";
 import Meet_The_Team from "./components/Meet_The_Team";
 import Join_Us from "./components/Join_Us";
 import EventSection from "./components/EventSection";
-import Footer from "./components/footer";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
