@@ -1,5 +1,5 @@
 import { createContext } from "react";
-//import { event_list } from "../assets/front-end/assets.js";
+import { event_list } from "../assets/front-end/assets";
 
 export const StoreContext = createContext(null);
 
