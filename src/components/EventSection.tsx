@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Button } from "./ui/button";
 import EventCard from "./EventCard";
 
 const eventsData = {
@@ -70,36 +71,36 @@ const EventsSection = () => {
   }, [selectedEvent]);
 
   return (
-    <div className="bg-[#FAEDD6] py-12">
-      <div className="w-[90%] max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-[#780001] mb-4 text-left">
+    <div className="bg-[#355848] py-12 min-h-screen w-full mt-5">
+      <div className="w-[80%]  mx-auto">
+        <h2 className=" font-bold text-[white] text-7xl mb-4 text-left">
           Events
         </h2>
-        <hr className="border-[#000000] mb-6" />
+        <hr className="border-[#000000] mt-10" />
 
         {/* Tabs and Sort */}
-        <div className="flex flex-wrap gap-4 items-center mb-6">
+        <div className="flex flex-wrap gap-4 items-center mt-5">
           <div className="flex gap-2">
             {["2025", "2024"].map((year) => (
-              <button
+              <Button
                 key={year}
                 onClick={() => {
                   setActiveYear(year as "2025" | "2024");
                   setVisibleCount(6);
                 }}
-                className={`px-4 py-1 rounded-full border text-sm font-semibold transition ${
+                className={`px-15 py-1 rounded-full border text-sm font-semibold transition ${
                   activeYear === year
-                    ? "bg-[#dfefff] border-black"
+                    ? "bg-[#FAEDD6] border-black text-[black]"
                     : "bg-transparent text-gray-600 hover:bg-gray-100"
                 }`}
               >
                 {year}
-              </button>
+              </Button>
             ))}
           </div>
           <div className="ml-auto">
             <select
-              className="border border-gray-400 rounded-lg px-3 py-1 text-sm"
+              className="border border-gray-400 rounded-lg px-3 py-1 text-sm mt-15"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
             >
@@ -138,12 +139,12 @@ const EventsSection = () => {
           <>
             {/* Overlay */}
             <div
-              className="fixed inset-0 bg-black bg-opacity-50 z-40 animate-fade-in"
+              className="fixed inset-0 bg-black bg-opacity-50 z-40 animate-fade-in "
               onClick={() => setSelectedEvent(null)}
             />
 
             {/* Modal Content */}
-            <div className="fixed inset-0 flex justify-center items-center z-50 px-4">
+            <div className="fixed inset-0 flex justify-center items-center z-50 px-4 ">
               <div className="bg-white w-full max-w-lg rounded-2xl p-6 shadow-2xl relative animate-in slide-in-from-top duration-300">
                 <button
                   className="absolute top-3 right-4 text-2xl font-bold text-gray-600 hover:text-black"
@@ -151,15 +152,15 @@ const EventsSection = () => {
                 >
                   &times;
                 </button>
-                <h3 className="text-2xl font-bold mb-4 text-[#780001]">
+                <h3 className="text-2xl font-bold mt-10 text-[#780001]">
                   {selectedEvent.title}
                 </h3>
                 <img
                   src={selectedEvent.image}
                   alt={selectedEvent.title}
-                  className="w-full h-64 object-cover rounded-lg mb-4"
+                  className="w-full h-64 object-cover rounded-lg mt-4"
                 />
-                <p className="text-gray-800 mb-1">
+                <p className="text-gray-800 mt-10">
                   <strong>Location:</strong> {selectedEvent.location}
                 </p>
                 <p className="text-gray-800 mb-1">
@@ -169,9 +170,7 @@ const EventsSection = () => {
                   <strong>Rating:</strong> ⭐ {selectedEvent.rating.toFixed(2)}{" "}
                   ({selectedEvent.reviews} reviews)
                 </p>
-                <p className="text-gray-700 mt-4">
-                  {selectedEvent.description}
-                </p>
+                <p className="text-gray-700 mt-">{selectedEvent.description}</p>
               </div>
             </div>
           </>

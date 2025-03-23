@@ -12,8 +12,9 @@ const App = () => {
       <Navbar />
       <Hero />
       <About_US />
-      <Meet_The_Team />
       <EventSection />
+      <Meet_The_Team />
+
       <Join_Us />
       <Footer />
     </div>
