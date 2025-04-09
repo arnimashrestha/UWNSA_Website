@@ -5,6 +5,7 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import leftpink from "../assets/front-end/leftpink.png";
 
 const Navbar = () => {
+  const [menu, setMenu] = useState("home");
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -25,13 +26,23 @@ const Navbar = () => {
 
         {/* Nav bar for >md */}
         <ul className="hidden md:flex items-center ">
-          <li className="p-4 lg:text-xl ">About</li>
+          <li
+            onClick={() => setMenu("home")}
+            className={`p-4 lg:text-xl ${menu === "home" ? "active" : ""}`}
+          >
+            About
+          </li>
           <li className="p-4 lg:text-xl ">Events</li>
-          <Button className="p-4 lg:text-xl  bg-[#780001] "> Join Us </Button>
+          <li>
+            <Button className="p-4 lg:text-xl  bg-[#780001]  hover:bg-[#a31414] ">
+              {" "}
+              Join Us{" "}
+            </Button>
+          </li>
         </ul>
 
         <div onClick={handleNav} className="block md:hidden">
-          {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+          {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
         </div>
 
         {/* Hamburger Menu for >md */}

@@ -2,17 +2,12 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
 //import { useState } from "react";
-
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "./ui/button";
 
 import SignupForm from "./SignUp";
 
@@ -67,7 +62,10 @@ const Join_US_v2 = () => {
     }));
   };
   return (
-    <div className=" mt-5 flex justify-center min-h-[100vh] w-full">
+    <div
+      className=" mt-5 flex justify-center min-h-[100vh] w-full"
+      id="join-us"
+    >
       <div className="w-[80%] lg:w items-center ">
         <h1 className="text-white text-7xl font-bold mt-20 ">About Us</h1>
         <hr className=" border-black mt-10"></hr>
@@ -155,21 +153,6 @@ const Join_US_v2 = () => {
                       />
                     </CardContent>
                   </CardHeader>
-                  <CardFooter className="mt-5 flex justify-end ">
-                    <Button
-                      onClick={() =>
-                        setChecked({
-                          culture: false,
-                          events: false,
-                          community: false,
-                        })
-                      }
-                      className="px-4 py-2 rounded-md border-gray-800 bg-[#780001]"
-                    >
-                      {" "}
-                      Submit
-                    </Button>
-                  </CardFooter>
                 </Card>
               </div>
             )}

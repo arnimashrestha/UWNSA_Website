@@ -1,5 +1,5 @@
 //importing db instance, allows us to write data into the firebase firestore
-import db from "@/firebase";
+import { db } from "@/firebase";
 
 //collection allows us to refer to a specific folder in the firebase database
 //add doc lets us add a new document to that collection
@@ -15,18 +15,24 @@ type OncloseProp = {
 };
 
 const SignupForm = ({ onClose }: OncloseProp) => {
+  console.log("first checkpoint");
   const [username, setuserName] = useState("");
   const [email, setEmail] = useState("");
 
   {
     /* event:React.FormEvent is needed because it allows TS to understand that when event is being passed into the handle submit function, what its type is*/
   }
+
   const handleSubmit = async (event: React.FormEvent) => {
-    {
-      /* preventDefault is needed so that the page does not refresh*/
-    }
+    console.log("second checkpoint");
+    alert(`Username: ${username}\nEmail: ${email}`);
+
+    /* preventDefault is needed so that the page does not refresh*/
+
     event.preventDefault();
-    if (!username || !email) return alert("Please fill both fields");
+
+    if (!username || !email) alert("Please fill both fields");
+    console.log("third checkpoint");
     //saving to Firebase
     try {
       await addDoc(collection(db, "signups"), {
@@ -34,7 +40,8 @@ const SignupForm = ({ onClose }: OncloseProp) => {
         username,
         email,
       });
-      return alert(`Username: ${username}\nEmail: ${email}`);
+      alert(`Username: ${username}\nEmail: ${email}`);
+      console.log("hello");
       setuserName("");
       setEmail("");
       onClose();
@@ -42,6 +49,7 @@ const SignupForm = ({ onClose }: OncloseProp) => {
       console.error("Error", err);
       //change alert using shad CN in upcoming
       alert("Something went wrong, please try again");
+      onClose();
     }
   };
 
@@ -72,6 +80,9 @@ const SignupForm = ({ onClose }: OncloseProp) => {
           placeholder="Please enter your email"
         />
       </div>
+      <Button className=" mt-6 px-4 py-2 rounded-md border-gray-800 bg-[#780001] hover:bg-[#a31414]">
+        Submit
+      </Button>
     </form>
   );
 };

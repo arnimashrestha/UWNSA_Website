@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import SignupForm from "./SignUp";
 
 const Join_Us = () => {
   const [checkboxes, setCheckboxes] = useState({

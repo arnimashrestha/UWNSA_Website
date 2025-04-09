@@ -60,7 +60,6 @@ const EventsSection = () => {
     setVisibleCount((prev) => prev + 3);
   };
 
-  // ✅ Scroll lock effect
   useEffect(() => {
     if (selectedEvent) {
       document.body.classList.add("overflow-hidden");
@@ -71,7 +70,7 @@ const EventsSection = () => {
   }, [selectedEvent]);
 
   return (
-    <div className="bg-[#355848] py-12 min-h-screen w-full mt-5">
+    <div className="bg-[#355848] py-12 min-h-screen w-full mt-5" id="event">
       <div className="w-[80%]  mx-auto">
         <h2 className=" font-bold text-[white] text-7xl mb-4 text-left">
           Events
@@ -90,7 +89,7 @@ const EventsSection = () => {
                 }}
                 className={`px-15 py-1 rounded-full border text-sm font-semibold transition ${
                   activeYear === year
-                    ? "bg-[#FAEDD6] border-black text-[black]"
+                    ? "bg-[#FAEDD6] hover:bg-[#f3ddc1] border-black text-[black]"
                     : "bg-transparent text-gray-600 hover:bg-gray-100"
                 }`}
               >

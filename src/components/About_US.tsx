@@ -3,7 +3,10 @@ import team from "../assets/front-end/Team.png";
 const About_US = () => {
   return (
     //Need to use a flex box because and have to ensure that when its on a small screen, then it is in a row (the image)
-    <div className="bg-[#FAEDD6] mt-30 flex justify-center min-h-[100vh] w-full">
+    <div
+      className="bg-[#FAEDD6] mt-30 flex justify-center min-h-[100vh] w-full"
+      id="about"
+    >
       <div className="w-[80%] lg:w items-center ">
         <h1 className="text-7xl font-bold text-[#780001] mt-20 ">About Us</h1>
         <hr className=" border-[#000000]  mt-10"></hr>
@@ -31,7 +34,7 @@ const About_US = () => {
             />
           </div>
         </div>
-        <div className="text-center text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#780001] italic mt-10 xl:mt-30">
+        <div className="text-center text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#780001] italic mt-10 mb-10 md:mb-0 xl:mt-30">
           "Nurturing our roots, growing our community, and shaping a vibrant
           future together."
         </div>
