@@ -62,12 +62,9 @@ const Join_US_v2 = () => {
     }));
   };
   return (
-    <div
-      className=" mt-5 flex justify-center min-h-[100vh] w-full"
-      id="join-us"
-    >
+    <div className=" mt-5 flex justify-center min-h-[100vh] w-full" id="join">
       <div className="w-[80%] lg:w items-center ">
-        <h1 className="text-white text-7xl font-bold mt-20 ">About Us</h1>
+        <h1 className="text-white text-7xl font-bold mt-20 ">Join Us</h1>
         <hr className=" border-black mt-10"></hr>
         <div className="flex flex-col xl:flex-row lg:items-stretch gap-8 mt-10 pb-5">
           <div className="flex-1 flex text-left items-start ">

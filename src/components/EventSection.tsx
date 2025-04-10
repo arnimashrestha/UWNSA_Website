@@ -70,7 +70,7 @@ const EventsSection = () => {
   }, [selectedEvent]);
 
   return (
-    <div className="bg-[#355848] py-12 min-h-screen w-full mt-5" id="event">
+    <div className="bg-[#355848] py-12 min-h-screen w-full mt-5" id="events">
       <div className="w-[80%]  mx-auto">
         <h2 className=" font-bold text-[white] text-7xl mb-4 text-left">
           Events
