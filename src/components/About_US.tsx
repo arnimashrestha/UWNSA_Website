@@ -1,4 +1,11 @@
 import team from "../assets/front-end/Team.png";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const About_US = () => {
   return (
@@ -26,15 +33,42 @@ const About_US = () => {
               </span>
             </p>
           </div>
-          <div className="flex-1 flex justify-center items-center">
-            <img
+          <div className="flex-1 flex justify-center lg:justify-center w-full">
+            {/*<img
               src={team}
               alt=""
               className=" w-[80%] max-w-2xl max-h-[400px] h-auto object-cover rounded-2xl flex items-start"
-            />
+            />*/}
+            <Carousel className="w-full max-w-xs sm:max-w-sm md:max-w-md">
+              <CarouselContent>
+                <CarouselItem className="basis-full">
+                  <img
+                    src={team}
+                    alt="Team 1"
+                    className="rounded-2xl w-full h-auto object-cover"
+                  />
+                </CarouselItem>
+                <CarouselItem className="basis-full">
+                  <img
+                    src={team}
+                    alt="Team 2"
+                    className="rounded-2xl w-full h-auto object-cover"
+                  />
+                </CarouselItem>
+                <CarouselItem className="basis-full">
+                  <img
+                    src={team}
+                    alt="Team 3"
+                    className="rounded-2xl w-full h-auto object-cover"
+                  />
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
-        <div className="text-center text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#780001] italic mt-10 mb-10 md:mb-0 xl:mt-30">
+        <div className="text-center text-2xl lg:text-3xl xl:text-4xl font-semibold text-[#780001] italic mt-10 mb-10  xl:mt-30">
           "Nurturing our roots, growing our community, and shaping a vibrant
           future together."
         </div>

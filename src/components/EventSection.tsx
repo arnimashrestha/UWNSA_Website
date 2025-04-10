@@ -1,6 +1,37 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import EventCard from "./EventCard";
+import { Check, ChevronsUpDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+
+const frameworks = [
+  {
+    value: "rating",
+    label: "Rating",
+  },
+  {
+    value: "name",
+    label: "Name",
+  },
+  {
+    value: "location",
+    label: "Location",
+  },
+];
 
 const eventsData = {
   2025: [
@@ -46,6 +77,10 @@ const EventsSection = () => {
   const [sortBy, setSortBy] = useState("rating");
   const [visibleCount, setVisibleCount] = useState(6);
   const [selectedEvent, setSelectedEvent] = useState<any>(null);
+
+  //for the combobox
+  const [open, setOpen] = useState(false);
+  const [value, setValue] = useState("");
 
   const sortedEvents = [...eventsData[activeYear]].sort((a, b) => {
     if (sortBy === "rating") return b.rating - a.rating;
@@ -98,20 +133,76 @@ const EventsSection = () => {
             ))}
           </div>
           <div className="ml-auto">
+            <Popover open={open} onOpenChange={setOpen}>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  role="combobox"
+                  aria-expanded={open}
+                  className="w-[200px] justify between  mt-5 md:mt-0"
+                >
+                  {value
+                    ? frameworks.find((framework) => framework.value === value)
+                        ?.label
+                    : "Sort by "}
+                  <ChevronsUpDown className="opacity-50" />
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-[200px] p-0">
+                <Command>
+                  <CommandInput
+                    placeholder="Search sorting"
+                    className="h-9"
+                  ></CommandInput>
+                  <CommandList>
+                    <CommandEmpty> No Framework Found. </CommandEmpty>
+                    <CommandGroup>
+                      {frameworks.map((framework) => (
+                        <CommandItem
+                          key={framework.value}
+                          value={framework.value}
+                          onSelect={(currentValue) => {
+                            setValue(
+                              currentValue == value ? " " : currentValue
+                            );
+                            setSortBy(
+                              currentValue == value ? " " : currentValue
+                            );
+
+                            setOpen(false);
+                          }}
+                        >
+                          {framework.label}
+                          <Check
+                            className={cn(
+                              "ml-auto",
+                              value === framework.value
+                                ? "opacity-100"
+                                : "opacity-0"
+                            )}
+                          />
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </CommandList>
+                </Command>
+              </PopoverContent>
+            </Popover>
+            {/*
             <select
-              className="border border-gray-400 rounded-lg px-3 py-1 text-sm mt-15"
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-            >
-              <option value="rating">Sort by Rating</option>
-              <option value="name">Sort by Name</option>
-              <option value="location">Sort by Location</option>
-            </select>
+            className="border border-gray-400 rounded-lg px-3 py-1 text-sm mt-15"
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+          >
+            <option value="rating">Sort by Rating</option>
+            <option value="name">Sort by Name</option>
+            <option value="location">Sort by Location</option>
+          </select > */}
           </div>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {visibleEvents.map((event) => (
             <EventCard
               key={event.id}
