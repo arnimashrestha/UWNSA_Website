@@ -98,7 +98,7 @@ const eventsData = {
       image: hm,
       images: himalayanmela,
       description:
-        "Experience the richness of Nepali culture at Himalayan Mela, featuring vibrant music, traditional food, cultural performances, and a joyful celebration of community..",
+        "Experience the richness of Nepali culture at Himalayan Mela, featuring vibrant music, traditional food, cultural performances, and a joyful celebration of community!",
     },
   ],
 };
