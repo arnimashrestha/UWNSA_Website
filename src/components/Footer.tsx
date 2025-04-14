@@ -54,7 +54,7 @@ const Footer = () => {
             <li>
               Instagram:{" "}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/uwaterloonsa/"
                 target="_blank"
                 className="hover:underline"
               >

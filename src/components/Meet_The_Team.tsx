@@ -1,13 +1,13 @@
 import img from "../assets/front-end/pfpdef.png";
-import Aayushma from "../assets/front-end/NSA-Aayushma.png";
-import Sun from "../assets/front-end/NSA-Sun.png";
-import Prapti from "../assets/front-end/NSA-Prapti.png";
-import Pristina from "../assets/front-end/NSA-Pristina.png";
-import Kripa from "../assets/front-end/NSA-Kripa.png";
-import Arnima from "../assets/front-end/NSA-Arnima.jpg";
-import Nandita from "../assets/front-end/NSA-Nandita.png";
-import Nirjra from "../assets/front-end/Nirjra.png";
-import Pranab from "../assets/front-end/pwizzy.png";
+import Aayushma from "../assets/front-end/team/NSA-Aayushma.png";
+import Sun from "../assets/front-end/team/NSA-Sun.png";
+import Prapti from "../assets/front-end/team/NSA-Prapti.png";
+import Pristina from "../assets/front-end/team/NSA-Pristina.png";
+import Kripa from "../assets/front-end/team/NSA-Kripa.png";
+import Arnima from "../assets/front-end/team/NSA-Arnima.jpg";
+import Nandita from "../assets/front-end/team/NSA-Nandita.png";
+import Nirjra from "../assets/front-end/team/Nirjra.png";
+import Pranab from "../assets/front-end/team/pwizzy.png";
 
 const TeamSection = () => {
   // Updated team members data
@@ -70,7 +70,10 @@ const TeamSection = () => {
   ];
 
   return (
-    <div className="bg-[#FAEDD6] mt-10 flex justify-center min-h-[100vh] w-full ">
+    <div
+      id="team"
+      className="bg-[#FAEDD6] mt-10 flex justify-center min-h-[100vh] w-full "
+    >
       <div className="w-[80%] items-center">
         <h1 className="text-7xl font-bold text-[#780001] mt-10 ">
           Meet The Team

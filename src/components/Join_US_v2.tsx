@@ -120,7 +120,7 @@ const Join_US_v2 = () => {
               </CardContent>
             </Card>
             {allChecked && (
-              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30">
+              <div className="fixed inset-0 z-50 flex items-center  backdrop-blur-sm justify-center bg-black/30">
                 <Card className=" relative bg-white rounded-2xl p-8 shadow-xl max-w-3xl w-full border border-black">
                   <button
                     className="absolute top-3 right-10 text-2xl font-bold text-gray-600 hover:text-black"
