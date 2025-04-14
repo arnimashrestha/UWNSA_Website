@@ -134,7 +134,9 @@ const EventsSection = () => {
   }, [selectedEvent]);
 
   return (
+
     <div className="bg-[#355848] py-12 min-h-screen w-full mt-5" id="events">
+
       <div className="w-[80%]  mx-auto">
         <h2 className=" font-bold text-[white] text-7xl mb-4 text-left">
           Events
@@ -153,7 +155,9 @@ const EventsSection = () => {
                 }}
                 className={`px-15 py-1 rounded-full border text-sm font-semibold transition ${
                   activeYear === year
+
                     ? "bg-[#FAEDD6] hover:bg-[#f3ddc1] border-black text-[black]"
+
                     : "bg-transparent text-gray-600 hover:bg-gray-100"
                 }`}
               >
@@ -219,6 +223,7 @@ const EventsSection = () => {
             </Popover>
             {/*
             <select
+
             className="border border-gray-400 rounded-lg px-3 py-1 text-sm mt-15"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
@@ -227,6 +232,7 @@ const EventsSection = () => {
             <option value="name">Sort by Name</option>
             <option value="location">Sort by Location</option>
           </select > */}
+
           </div>
         </div>
 
@@ -258,7 +264,9 @@ const EventsSection = () => {
           <>
             {/* Overlay */}
             <div
+
               className="fixed inset-0  backdrop-blur-sm z-40"
+
               onClick={() => setSelectedEvent(null)}
             />
 
@@ -274,6 +282,7 @@ const EventsSection = () => {
                 <h3 className="text-2xl font-bold mt-10 text-[#780001]">
                   {selectedEvent.title}
                 </h3>
+
                 <Carousel>
                   <CarouselContent>
                     {(selectedEvent.images as string[]).map(

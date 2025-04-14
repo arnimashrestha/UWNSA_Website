@@ -14,7 +14,11 @@ const App = () => {
       <About_US />
       <EventSection />
       <Meet_The_Team />
+
       <Join_US_v2 />
+
+
+
       <Footer />
     </div>
   );

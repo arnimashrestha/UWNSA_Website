@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Button } from "./ui/button";
 
 const Join_Us = () => {
   const [checkboxes, setCheckboxes] = useState({
@@ -21,24 +22,24 @@ const Join_Us = () => {
   };
 
   return (
-    <div className="bg-[#FAEDD6] py-12">
-      <div className="w-[90%] max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-[#780001] mb-4 text-left">
+    <div className="bg-[#355848] py-12">
+      <div className="w-[80%] min-h-screen mx-auto">
+        <h2 className="text-7xl font-bold text-[white] mb-4 text-left">
           Join Us
         </h2>
         <hr className="border-[#000000] mb-6" />
 
-        <p className="text-lg mb-2 text-black text-left">
+        <p className="text-lg mt-10 text-white text-left">
           Be a part of a thriving Nepali community — connect, learn, and grow
           with us!
         </p>
-        <p className="text-md mb-8 text-gray-800 text-left">
+        <p className="text-md mb-8 text-white text-left">
           The Nepali Student Association (NSA) is more than a club — it is a
           space where you can embrace your heritage, meet like-minded friends,
           and participate in exciting events throughout the year.
         </p>
 
-        <div className="bg-[#fceaea] border border-black rounded-xl px-6 py-6 space-y-5 shadow-md">
+        <div className="bg-[#FAEDD6] border border-black rounded-xl px-6 py-6 space-y-5 shadow-md">
           <CheckboxItem
             id="culture"
             checked={checkboxes.culture}
@@ -78,12 +79,12 @@ const Join_Us = () => {
 
         {/* CTA Button */}
         <div className="mt-8 text-left">
-          <button
+          <Button
             onClick={() => setIsModalOpen(true)}
             className="bg-[#780001] hover:bg-[#5c0000] text-white font-semibold py-3 px-6 rounded-xl shadow-lg transition-all duration-300"
           >
             Join Us Now
-          </button>
+          </Button>
         </div>
       </div>
 
