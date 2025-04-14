@@ -10,7 +10,6 @@ const Join_Us = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // ✅ Automatically open modal if all checkboxes are checked
   useEffect(() => {
     const allChecked = Object.values(checkboxes).every((val) => val === true);
     if (allChecked) {

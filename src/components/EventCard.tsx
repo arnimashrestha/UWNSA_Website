@@ -27,7 +27,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, onClick }) => {
       <div className="flex justify-between items-center mb-1">
         <h3 className="text-lg font-bold text-black">{event.title}</h3>
         <div className="text-sm text-[#780001] flex items-center gap-1">
-          ⭐ <span className="font-bold">{event.rating.toFixed(2)}</span>
+          <span className="font-bold">{event.rating.toFixed(2)}</span>
           <span className="text-black">({event.reviews})</span>
         </div>
       </div>

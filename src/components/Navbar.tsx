@@ -3,8 +3,10 @@ import logo from "../assets/front-end/logo.png";
 import { Button } from "./ui/button";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import leftpink from "../assets/front-end/leftpink.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [menu, setMenu] = useState("home");
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -25,13 +27,73 @@ const Navbar = () => {
 
         {/* Nav bar for >md */}
         <ul className="hidden md:flex items-center ">
-          <li className="p-4 lg:text-xl ">About</li>
-          <li className="p-4 lg:text-xl ">Events</li>
-          <Button className="p-4 lg:text-xl  bg-[#780001] "> Join Us </Button>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenu("about");
+
+              const element = document.getElementById("about");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className={`p-4 lg:text-xl ${menu === "about" ? "active" : ""}`}
+          >
+            About
+          </a>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenu("events");
+
+              const element = document.getElementById("events");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className={`p-4 lg:text-xl ${menu === "events" ? "active" : ""} `}
+          >
+            Events
+          </a>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenu("team");
+
+              const element = document.getElementById("team");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className={`p-4 lg:text-xl ${menu === "team" ? "active" : ""} `}
+          >
+            Meet the Team
+          </a>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setMenu("join");
+
+              const element = document.getElementById("join");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className={`p-4 lg:text-xl ${menu === "join" ? "join" : ""} `}
+          >
+            <Button className="p-4 lg:text-xl  bg-[#780001]  hover:bg-[#a31414] ">
+              {" "}
+              Join Us{" "}
+            </Button>
+          </a>
         </ul>
 
         <div onClick={handleNav} className="block md:hidden">
-          {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+          {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
         </div>
 
         {/* Hamburger Menu for >md */}
@@ -44,9 +106,55 @@ const Navbar = () => {
         >
           <img src={logo} alt=" " className="h-12-w-auto m-4" />
           <ul className="uppercase p-4">
-            <li className="p-4 border-b border-gray-000">About</li>
-            <li className="p-4  border-b border-gray-000">Events</li>
-            <li className="p-4  border-b border-gray-000"> Join Us </li>
+            <li
+              onClick={() => {
+                setNav(false);
+                const element = document.getElementById("about");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="p-4 border-b border-gray-000"
+            >
+              About
+            </li>
+            <li
+              onClick={() => {
+                setNav(false);
+                const element = document.getElementById("events");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="p-4  border-b border-gray-000"
+            >
+              Events
+            </li>
+            <li
+              onClick={() => {
+                setNav(false);
+                const element = document.getElementById("team");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="p-4  border-b border-gray-000"
+            >
+              Meet the Team
+            </li>
+            <li
+              onClick={() => {
+                setNav(false);
+                const element = document.getElementById("join");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="p-4  border-b border-gray-000"
+            >
+              {" "}
+              Join Us{" "}
+            </li>
           </ul>
         </div>
       </div>
