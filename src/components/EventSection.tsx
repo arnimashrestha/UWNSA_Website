@@ -9,8 +9,7 @@ const eventsData = {
       title: "Momo Contest",
       location: "KW Kitchen",
       date: "Feb 6th 2025",
-      rating: 4.99,
-      reviews: 10,
+
       image: "/images/momo.jpg",
       description: "Join our Momo Contest and show off your dumpling skills!",
     },
@@ -19,8 +18,6 @@ const eventsData = {
       title: "Street Food",
       location: "E7",
       date: "Feb 6th 2025",
-      rating: 4.31,
-      reviews: 10,
       image: "/images/street-food.jpg",
       description: "Explore diverse cuisines in our street food festival!",
     },
@@ -32,8 +29,6 @@ const eventsData = {
       title: "Dashain Celebration",
       location: "STC",
       date: "Nov 1st 2024",
-      rating: 4.8,
-      reviews: 15,
       image: "/images/dashain.jpg",
       description:
         "Celebrate Dashain with music, food, and cultural performances.",
@@ -166,10 +161,7 @@ const EventsSection = () => {
                 <p className="text-gray-800 mb-1">
                   <strong>Date:</strong> {selectedEvent.date}
                 </p>
-                <p className="text-gray-800 mb-1">
-                  <strong>Rating:</strong> ⭐ {selectedEvent.rating.toFixed(2)}{" "}
-                  ({selectedEvent.reviews} reviews)
-                </p>
+
                 <p className="text-gray-700 mt-">{selectedEvent.description}</p>
               </div>
             </div>
