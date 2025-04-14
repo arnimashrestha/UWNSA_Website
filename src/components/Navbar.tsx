@@ -56,21 +56,7 @@ const Navbar = () => {
           >
             Events
           </a>
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setMenu("team");
 
-              const element = document.getElementById("team");
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-            className={`p-4 lg:text-xl ${menu === "team" ? "active" : ""} `}
-          >
-            Meet the Team
-          </a>
           <a
             href="#"
             onClick={(e) => {
@@ -129,18 +115,7 @@ const Navbar = () => {
             >
               Events
             </li>
-            <li
-              onClick={() => {
-                setNav(false);
-                const element = document.getElementById("team");
-                if (element) {
-                  element.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
-              className="p-4  border-b border-gray-000"
-            >
-              Meet the Team
-            </li>
+
             <li
               onClick={() => {
                 setNav(false);
