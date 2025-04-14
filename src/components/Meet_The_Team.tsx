@@ -1,5 +1,3 @@
-import img from "../assets/front-end/pfpdef.png";
-
 import Aayushma from "../assets/front-end/team/NSA-Aayushma.png";
 import Sun from "../assets/front-end/team/NSA-Sun.png";
 import Prapti from "../assets/front-end/team/NSA-Prapti.png";
@@ -9,15 +7,6 @@ import Arnima from "../assets/front-end/team/NSA-Arnima.jpg";
 import Nandita from "../assets/front-end/team/NSA-Nandita.png";
 import Nirjra from "../assets/front-end/team/Nirjra.png";
 import Pranab from "../assets/front-end/team/pwizzy.png";
-
-import Aayushma from "../assets/front-end/NSA-Aayushma.png";
-import Sun from "../assets/front-end/NSA-Sun.png";
-import Prapti from "../assets/front-end/NSA-Prapti.png";
-import Pristina from "../assets/front-end/NSA-Pristina.png";
-import Kripa from "../assets/front-end/NSA-Kripa.png";
-import Arnima from "../assets/front-end/NSA-Arnima.png";
-import Nandita from "../assets/front-end/NSA-Nandita.png";
-
 
 const TeamSection = () => {
   // Updated team members data
@@ -48,7 +37,6 @@ const TeamSection = () => {
       name: "Prapti Acharya",
 
       role: "Finance Lead",
-
 
       image: Prapti, // Replace with actual image import
     },
@@ -87,18 +75,15 @@ const TeamSection = () => {
       name: "Nirjra Gyawali",
       role: "Events Lead",
       image: Nirjra,
- // Replace with actual image import
-
+      // Replace with actual image import
     },
   ];
 
   return (
-
     <div
       id="team"
       className="bg-[#FAEDD6] mt-10 flex justify-center min-h-[100vh] w-full "
     >
-
       <div className="w-[80%] items-center">
         <h1 className="text-7xl font-bold text-[#780001] mt-10 ">
           Meet The Team
@@ -106,7 +91,6 @@ const TeamSection = () => {
         <hr className="mt-10 border-[#000000]"></hr>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-10 pb-5">
-
           {teamMembers.map((member) => (
             <div
               //keeps track of each element (which is important for performance)

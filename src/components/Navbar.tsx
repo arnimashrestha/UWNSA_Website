@@ -3,7 +3,6 @@ import logo from "../assets/front-end/logo.png";
 import { Button } from "./ui/button";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import leftpink from "../assets/front-end/leftpink.png";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
