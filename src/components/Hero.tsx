@@ -28,12 +28,12 @@ const Hero = () => {
                 element.scrollIntoView({ behavior: "smooth" });
               }
             }}
-            className="bg-[#780001] hover:bg-[#a31414] w-[80%] md:w-full xl:text-xl xl:h-10 2xl:text-2xl 2xl:h-15 rounded-3xl"
+            className="bg-[#780001] hover:bg-[#a31414] w-[80%] xl:text-xl xl:h-10 2xl:text-2xl 2xl:h-15 rounded-3xl"
           >
             Join us
           </Button>
           <Button
-            className="bg-[#F1FAEE] hover:bg-[#FAEDD6] text-black w-[80%] md:w-full  xl:text-xl xl:h-10 2xl:text-2xl 2xl:h-15 rounded-3xl"
+            className="bg-[#F1FAEE] hover:bg-[#FAEDD6] text-black w-[80%] xl:text-xl xl:h-10 2xl:text-2xl 2xl:h-15 rounded-3xl"
             onClick={() => {
               const element = document.getElementById("events");
               if (element) {
