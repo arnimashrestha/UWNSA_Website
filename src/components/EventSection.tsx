@@ -134,9 +134,7 @@ const EventsSection = () => {
   }, [selectedEvent]);
 
   return (
-
     <div className="bg-[#355848] py-12 min-h-screen w-full mt-5" id="events">
-
       <div className="w-[80%]  mx-auto">
         <h2 className=" font-bold text-[white] text-7xl mb-4 text-left">
           Events
@@ -155,9 +153,7 @@ const EventsSection = () => {
                 }}
                 className={`px-15 py-1 rounded-full border text-sm font-semibold transition ${
                   activeYear === year
-
                     ? "bg-[#FAEDD6] hover:bg-[#f3ddc1] border-black text-[black]"
-
                     : "bg-transparent text-gray-600 hover:bg-gray-100"
                 }`}
               >
@@ -232,7 +228,6 @@ const EventsSection = () => {
             <option value="name">Sort by Name</option>
             <option value="location">Sort by Location</option>
           </select > */}
-
           </div>
         </div>
 
@@ -264,9 +259,7 @@ const EventsSection = () => {
           <>
             {/* Overlay */}
             <div
-
               className="fixed inset-0  backdrop-blur-sm z-40"
-
               onClick={() => setSelectedEvent(null)}
             />
 
@@ -288,7 +281,7 @@ const EventsSection = () => {
                     {(selectedEvent.images as string[]).map(
                       (src: string, idx: number) => (
                         <CarouselItem key={idx}>
-                          <img src={src} className="border-2 border-red-500" />
+                          <img src={src} />
                         </CarouselItem>
                       )
                     )}
