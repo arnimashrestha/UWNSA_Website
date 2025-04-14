@@ -70,7 +70,8 @@ const eventsData = {
       reviews: 10,
       image: cat5,
       images: chiyaandtaas,
-      description: "Join our Momo Contest and show off your dumpling skills!",
+      description:
+        "Unwind with a warm cup of Nepali chiya and enjoy a fun evening of traditional card games and good company!",
     },
     {
       id: 2,
@@ -81,7 +82,8 @@ const eventsData = {
       reviews: 10,
       image: ton1,
       images: tasteofnepal,
-      description: "Explore diverse cuisines in our street food festival!",
+      description:
+        "Explore the vibrant flavors of Nepal with beloved dishes like momo, chow mein, sel roti, aalu ko achar, and a comforting cup of chiya in a celebration of culture and community.",
     },
     // Add more events...
   ],
@@ -96,7 +98,7 @@ const eventsData = {
       image: hm,
       images: himalayanmela,
       description:
-        "Celebrate Dashain with music, food, and cultural performances.",
+        "Experience the richness of Nepali culture at Himalayan Mela, featuring vibrant music, traditional food, cultural performances, and a joyful celebration of community..",
     },
   ],
 };
