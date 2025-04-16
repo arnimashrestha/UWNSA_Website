@@ -2,6 +2,8 @@
 
 This is the official website for the Nepali Students' Association (NSA). Built to showcase our events, team, and mission, and to engage with the broader student community.
 
+**Live Site**: [https://uwnsa-website-chi.vercel.app/](https://uwnsa-website-chi.vercel.app/)
+
 ## 🛠️ Tech Stack
 
 - **React**
